@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Información de {{ elementounico.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h3>Información del personaje</h3>
+  <p><b>Nombre .......... {{ elementounico.name }}</b></p>
+  <p><b>Altura ............ {{ elementounico.height }}</b></p>
+  <p><b>Peso ............. {{ elementounico.mass }}</b></p>
+  <p><b>Sexo ............. {{ elementounico.gender }}</b></p>
+  <p><b>Color de Ojo ............. {{ elementounico.eye_color }}</b></p>  
+  <p><b>Especie ............. {{ especie.name }}</b></p>
+  <ion-button color="primary"
+              (click)="guardando()">
+              Guardar en FireBase
+  </ion-button>
+</ion-content>

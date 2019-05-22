@@ -1,14 +1,36 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Starwars
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    Personajes  
   </div>
+  <ion-list>
+  <table>
+	<ion-item *ngFor="let personaje of elementos; let i = index">	
+	<tr><th>
+		<p>
+			{{ personaje.name }}
+		</p>
+	</th><th>
+		<p>
+			&nbsp;&nbsp; Altura :{{ personaje.height }} &nbsp;&nbsp;
+		</p>
+	</th><th> 
+		<p>
+			&nbsp;&nbsp; Peso :{{ personaje.mass }} &nbsp;&nbsp;
+		</p>	  
+	</th><th> 
+		<p>
+			<ion-button (click)="abrir_pagina( i )">Abrir en nueva página</ion-button>
+		</p>	  
+	</th></tr>    	
+    </ion-item>
+  </table>	  	 
+  </ion-list>  
 </ion-content>
